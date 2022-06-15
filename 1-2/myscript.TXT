@@ -1,0 +1,42 @@
+#!/bin/bash
+# our comment is here
+echo "Вы находитесь в данной директории:"
+pwd
+echo "Вы работаете в этом аккаунте:"
+whoami
+cd /Users/kirillarmishev/Documents/IT
+mkdir Корзина
+mkdir lab
+pushd lab
+touch 1.txt
+echo 'Hello world1' >  text1.txt
+echo 'Hello world2' > text2.txt
+cat text1.txt >> 1.txt
+cat text2.txt >> 1.txt
+rm text1.txt
+rm text2.txt
+echo 'Иван 108
+Олег 680
+Василий 910
+Данил 110
+Олег 680
+Игорь 280
+Максим 80
+Роман 102
+Иван 108' >> 2.txt
+cat 2.txt | cut -d" " -f1|sort|'uniq' -c 
+touch b.pdf
+touch c.pdf
+touch d.pdf
+pwd
+cp b.pdf ../Корзина
+cp c.pdf ../Корзина
+cp d.pdf ../Корзина
+find . -name "*.pdf"| xargs rm -rf
+echo "Вы вернулись в начальную директорию:"
+popd
+
+
+
+
+
